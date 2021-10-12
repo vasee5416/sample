@@ -1,0 +1,16 @@
+def main():
+    testcases=int(input("Enter number of testcases :  "));
+    while testcases > 0 :
+        data = input().strip().split()
+        number_of_levels=int(data[0])
+        current_level=int(data[1])
+        missed_level=int(data[2])
+        choice1 = current_level-1 + 1 + number_of_levels
+        choice2 = current_level-1 + abs(current_level - missed_level) + (number_of_levels - missed_level + 1)
+        result = min ( choice1 , choice2)
+        print (result)
+        testcases-=1
+       
+if __name__ == "__main__":
+   main()
+   
